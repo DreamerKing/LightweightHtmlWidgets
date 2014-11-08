@@ -74,13 +74,13 @@
             this.ToolStripMenuItem5});
             this.ContextMenuStrip.Name = "ContextMenuStrip";
             this.ContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.ContextMenuStrip.Size = new System.Drawing.Size(153, 136);
+            this.ContextMenuStrip.Size = new System.Drawing.Size(125, 114);
             // 
             // ToolStripMenuItem1
             // 
             this.ToolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
-            this.ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.ToolStripMenuItem1.Text = "(!) Exit";
             this.ToolStripMenuItem1.ToolTipText = "(!) Exit - Close the LightweightHtmlWidgets application\r\n\r\n* The application will" +
     " be closed instantly, possible changes are discarded and can\'t be restored!";
@@ -90,7 +90,7 @@
             // 
             this.ToolStripMenuItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
-            this.ToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem2.Size = new System.Drawing.Size(124, 22);
             this.ToolStripMenuItem2.Text = "(!) Reload";
             this.ToolStripMenuItem2.ToolTipText = "(!) Reload - Reload the content of the LightweightHtmlWidgets application\r\n\r\n* Th" +
     "e content will be reloaded instantly, possible changes are discarded and can\'t b" +
@@ -102,21 +102,21 @@
             this.ToolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ToolStripMenuItem3.Enabled = false;
             this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(124, 22);
             // 
             // ToolStripMenuItem4
             // 
             this.ToolStripMenuItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ToolStripMenuItem4.Enabled = false;
             this.ToolStripMenuItem4.Name = "ToolStripMenuItem4";
-            this.ToolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem4.Size = new System.Drawing.Size(124, 22);
             // 
             // ToolStripMenuItem5
             // 
             this.ToolStripMenuItem5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.ToolStripMenuItem5.Enabled = false;
             this.ToolStripMenuItem5.Name = "ToolStripMenuItem5";
-            this.ToolStripMenuItem5.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem5.Size = new System.Drawing.Size(124, 22);
             // 
             // Window
             // 
