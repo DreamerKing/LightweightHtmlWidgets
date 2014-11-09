@@ -4,5 +4,5 @@ class Ipy_Interface:
     def __init__(self):
         pass
     
-    def test(data):
+    def test(self, data):
         return data;
