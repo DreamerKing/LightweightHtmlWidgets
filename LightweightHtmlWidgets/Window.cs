@@ -60,56 +60,68 @@ namespace LightweightHtmlWidgets
                     Preferences.WebGL = Boolean.Parse(this.Parser.GetSettingOrDefault("Preferences", "WebGL", "false"));
                     Preferences.WebSecurity = Boolean.Parse(this.Parser.GetSettingOrDefault("Preferences", "WebSecurity", "true"));
 
-                    this.Python = new PythonInstance(File.ReadAllText(Parser.GetSettingOrDefault("Ipy", "Script", "Ipy_Interface.py")), Parser.GetSettingOrDefault("Ipy", "Class", "Ipy_Interface"));
+                    this.Python = new PythonInstance(File.ReadAllText(Parser.GetSettingOrDefault("Ipy", "Script", "Ipy_Interface.py")), Parser.GetSettingOrDefault("Ipy", "Class", "Ipy_Interface"), Parser.GetSettingOrDefault("Ipy", "Lib", "Ipy.Lib"));
                 }
                 else
                 {
                     MessageBox.Show("Unable to find Settings ini!", "Application error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Application.Exit();
+                    System.Environment.Exit(0);
                 }
             }
-            catch
+            catch //(Exception ex)
             {
                 MessageBox.Show("Failed to load Settings corectly!", "Application error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+                System.Environment.Exit(0);
             }
 
             InitializeComponent();
 
                 this.Visible = false;
 
+                if (this.Parser != null)
+                {
+                    try
+                    {
+                        this.Width = int.Parse(this.Parser.GetSettingOrDefault("Window", "Width", "300"));
+                        this.Height = int.Parse(this.Parser.GetSettingOrDefault("Window", "Height", "300"));
+                        this.Text = this.Parser.GetSettingOrDefault("Window", "Title", "Window");
+                        this.FormBorderStyle = Boolean.Parse(this.Parser.GetSettingOrDefault("Window", "Resizability", "true")) ? FormBorderStyle.Sizable : FormBorderStyle.FixedDialog;
+                    }
+                    catch //(Exception ex)
+                    {
+                        // Do nothing...
+                    }
+                }
+
             this.Control.WebSession = WebCore.CreateWebSession(Preferences);
 
-            this.Control.DocumentReady += (s, e) =>
+            this.Control.NativeViewInitialized += (sender, e) =>
             {
-                JSObject Ipy = Control.CreateGlobalJavascriptObject("Ipy");
-                Ipy.Bind("InvokeApi", false, this.Interface);
-
-                if (this.Visible == false)
-                {
-                    this.Visible = true;
-                }
+                JSObject Ipy = Control.CreateGlobalJavascriptObject("Api");
+                Ipy.Bind("request", false, this.Interface);
             };
-            // -> Available after 'DocumentReady' event:
+            // -> Available after 'NativeVIewInitialized' event:
             // Ipy.InvokeApi(
-            //     function (Argument) { JSON.parse(Argument); },        // -> Callback
             //     "Test",                                               // -> Function
-            //     JSON.stringify({  })                                  // -> Argument
+            //     JSON.stringify({  }),                                 // -> Argument
+            //     function (Argument) { JSON.parse(Argument); }         // -> Callback
             // );
+
+            this.Control.DocumentReady += this.OnDocumentReady;
 
             this.Control.Source = this.Target;
         }
 
         void Interface(object sender, JavascriptMethodEventArgs e)
         {
-            if (!e.Arguments[0].IsObject && !e.Arguments[1].IsString && !e.Arguments[2].IsString)
+            if (!e.Arguments[1].IsString && !e.Arguments[1].IsString && !e.Arguments[2].IsObject)
             {
                 return;
             }
 
-            JSObject Callback = e.Arguments[0];
-            String Function = e.Arguments[1];
-            String Argument = e.Arguments[2];
+            String Function = e.Arguments[0];
+            String Argument = e.Arguments[1];
+            JSObject Callback = e.Arguments[2];
 
             try
             {
@@ -117,22 +129,20 @@ namespace LightweightHtmlWidgets
 
                 Callback.InvokeAsync("call", Callback, result);
             }
-            catch
+            catch //(Exception ex)
             {
                 // Do nothing...
             }
         }
 
-        private void ToolStripMenuItem1_Click(object sender, EventArgs e)
+        void OnDocumentReady(object sender, UrlEventArgs e)
         {
-            //EXIT
-            this.Close();
-        }
+            this.Control.DocumentReady -= this.OnDocumentReady;
 
-        private void ToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            //RELOAD
-            this.Control.Reload(true);
+            if (this.Visible == false)
+            {
+                this.Visible = true;
+            }
         }
     }
 }

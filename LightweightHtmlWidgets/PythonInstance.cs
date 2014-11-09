@@ -6,6 +6,7 @@ using IronPython.Hosting;
 using IronPython.Runtime;
 using Microsoft.Scripting;
 using Microsoft.Scripting.Hosting;
+using System.IO;
 
 // This class has been taken from 'http://stackoverflow.com/questions/14139766/run-a-particular-python-function-in-c-sharp-with-ironpython' and was written by 'NewProger' and modified by 'GameplayJDK'
 
@@ -19,10 +20,15 @@ namespace LightweightHtmlWidgets
         private CompiledCode compiled;
         private object pythonClass;
 
-        public PythonInstance(String code, String className)
+        public PythonInstance(String code, String className, String libaryPath)
         {
             //creating engine and stuff
             engine = Python.CreateEngine();
+
+            ICollection<String> path = engine.GetSearchPaths();
+            path.Add(Path.GetFullPath(libaryPath));
+            engine.SetSearchPaths(path);
+
             scope = engine.CreateScope();
 
             //loading and compiling code

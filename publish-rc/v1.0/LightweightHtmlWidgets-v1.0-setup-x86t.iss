@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "LightweightHtmlWidgets"
-#define MyAppVersion "1.0.0.0"
+#define MyAppVersion "1.0"
 #define MyAppPublisher "GameplayJDK"
 #define MyAppURL "https://github.com/GameplayJDK/LightweightHtmlWidgets"
 #define MyAppExeName "LightweightHtmlWidgets.exe"
@@ -11,7 +11,7 @@
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{F22D49DB-9AB2-49EA-8FF0-0E371FCBCBB4}
+AppId={{6393C463-5863-4793-A542-EB30D7AB3792}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -54,12 +54,14 @@ Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\p
 Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\last_error_information.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\libEGL.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\libGLESv2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\LightweightHtmlWidgets.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\Microsoft.CSharp.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\Microsoft.Dynamic.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\Microsoft.Scripting.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\Microsoft.Scripting.Metadata.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\Settings.ini"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\xinput9_1_0.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\publish-rc\v1.0\files\Ipy.Lib\*"; DestDir: "{app}\Ipy.Lib"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
