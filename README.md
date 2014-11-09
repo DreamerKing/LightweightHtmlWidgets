@@ -31,7 +31,7 @@ Planned features are:
   * For testers: [Download exe installer](https://github.com/GameplayJDK/LightweightHtmlWidgets/raw/master/publish-rc/v1.0/LightweightHtmlWidgets-v1.0-setup-x86t.exe)
   * For devlopers: [Download 7z archive](https://github.com/GameplayJDK/LightweightHtmlWidgets/raw/master/publish-rc/v1.0/LightweightHtmlWidgets-v1.0-files-x86t.7z)
 
-:heart: *[![Buy me a coffe](https://raw.githubusercontent.com/GameplayJDK/LightweightHtmlWidgets/master/buy-me-a-coffe.png "Buy me a coffe")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WMYAN6G9LE2LG)* :heart:
+:heart: *[![Buy me a coffe](https://raw.githubusercontent.com/GameplayJDK/LightweightHtmlWidgets/master/buy-me-a-coffee.png "Buy me a coffe")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WMYAN6G9LE2LG)* :heart:
 
 ## Installation
 
