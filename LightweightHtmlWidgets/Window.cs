@@ -85,7 +85,8 @@ namespace LightweightHtmlWidgets
                         this.Width = int.Parse(this.Parser.GetSettingOrDefault("Window", "Width", "300"));
                         this.Height = int.Parse(this.Parser.GetSettingOrDefault("Window", "Height", "300"));
                         this.Text = this.Parser.GetSettingOrDefault("Window", "Title", "Window");
-                        this.FormBorderStyle = Boolean.Parse(this.Parser.GetSettingOrDefault("Window", "Resizability", "true")) ? FormBorderStyle.Sizable : FormBorderStyle.FixedDialog;
+                        this.FormBorderStyle = Boolean.Parse(this.Parser.GetSettingOrDefault("Window", "Resizable", "true")) ? FormBorderStyle.Sizable : FormBorderStyle.FixedDialog;
+                        this.MaximizeBox = Boolean.Parse(this.Parser.GetSettingOrDefault("Window", "Resizable", "true"));
                     }
                     catch //(Exception ex)
                     {
