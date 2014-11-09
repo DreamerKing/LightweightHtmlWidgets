@@ -46,6 +46,10 @@ Planned features are:
   3. Test your application
   4. (Optional) Create an ISS installer using the `.iss` script preset
 
+## How to
+
+I'm currently creating a tutorial on how to use LighweightHtmlWidgets. It will be available [here](http://gameplayjdk.wordpress.com/2014/11/10/how-to-use-lightweighthtmlwidgets-to-create-a-html5-desktop-application-for-windows-10-11-2014) on 10. Nov 2014.
+
 ## Documentation
 
 The wiki is temporarily used as documentation: [`https://github.com/GameplayJDK/LightweightHtmlWidgets/wiki`](https://github.com/GameplayJDK/LightweightHtmlWidgets/wiki)
