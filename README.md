@@ -4,7 +4,7 @@
 
 LightweightHtmlWidgets is the successor of [gPyWk-environment](https://github.com/GameplayJDK/gPyWk-environment) on the Windows side. It is a HTML5 desktop framework for Windows. It depends on Awesomium.NET 1.7.4.2 and IronPython 1.7. Since they're available for Mono (which is available for OS X and Linux) as well, LightweightHtmlWidgets will possibly be ported to these platforms.
 
-The main part of it is an Awesomium.NET webview, which is a port of the WebKit browser for .NET (and C++). The webview, api interface and winform can be customized through the universal `Settings.ini` file (please visit the [wiki page](https://github.com/GameplayJDK/LightweightHtmlWidgets/wiki/Settings.ini) for more information). The api interface is normally stored in `Ipy_Interface.py` and supports all standard modules from Python 1.7 (please visit the [wiki page](https://github.com/GameplayJDK/LightweightHtmlWidgets/wiki/Ipy_Interface.py) for more information). For publishing [InnoSetup](http://www.jrsoftware.org/isinfo.php) is recommended (please visit the [wiki page](https://github.com/GameplayJDK/LightweightHtmlWidgets/wiki/LightweightHtmlWidgets-v1.x-setup-x86t.iss) for more information).
+The main part of it is an Awesomium.NET webview, which is a port of the WebKit browser for .NET (and C++). The webview, api interface and winform can be customized through the universal `Settings.ini` file (please visit the [wiki page](https://github.com/GameplayJDK/LightweightHtmlWidgets/wiki/Settings.ini) for more information). The api interface is normally stored in `Ipy_Interface.py` and supports all standard modules from Python 1.7 (please visit the [wiki page](https://github.com/GameplayJDK/LightweightHtmlWidgets/wiki/Ipy_Interface.py) for more information). Any api methods can be called from javascript through the `Api.request()` method (please visit the [wiki page](https://github.com/GameplayJDK/LightweightHtmlWidgets/wiki/Api.request(FunctionName:String,Argument:String,Callback:Function)) for more information)For publishing [InnoSetup](http://www.jrsoftware.org/isinfo.php) is recommended (please visit the [wiki page](https://github.com/GameplayJDK/LightweightHtmlWidgets/wiki/LightweightHtmlWidgets-v1.x-setup-x86t.iss) for more information).
 
 ## Features
 
@@ -27,9 +27,12 @@ Planned features are:
 
 ## Downloads
 
-* v1.0 | 09.11.2014 | (recommended)
+* v1.0 | 09.11.2014 | 
   * For testers: [Download exe installer](https://github.com/GameplayJDK/LightweightHtmlWidgets/raw/master/publish-rc/v1.0/LightweightHtmlWidgets-v1.0-setup-x86t.exe)
   * For devlopers: [Download 7z archive](https://github.com/GameplayJDK/LightweightHtmlWidgets/raw/master/publish-rc/v1.0/LightweightHtmlWidgets-v1.0-files-x86t.7z)
+* **v1.1 | 10.11.2014 | (recommended)**
+  * For testers: [Download exe installer](https://github.com/GameplayJDK/LightweightHtmlWidgets/raw/master/publish-rc/v1.1/LightweightHtmlWidgets-v1.1-setup-x86t.exe)
+  * For devlopers: [Download 7z archive](https://github.com/GameplayJDK/LightweightHtmlWidgets/raw/master/publish-rc/v1.1/LightweightHtmlWidgets-v1.1-files-x86t.7z)
 
 :heart: *[![Buy me a coffe](https://raw.githubusercontent.com/GameplayJDK/LightweightHtmlWidgets/master/buy-me-a-coffee.png "Buy me a coffe")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WMYAN6G9LE2LG)* :heart:
 
@@ -48,7 +51,7 @@ Planned features are:
 
 ## How to
 
-I'm currently creating a tutorial on how to use LighweightHtmlWidgets. It will be available [here](http://gameplayjdk.wordpress.com/2014/11/10/how-to-use-lightweighthtmlwidgets-to-create-a-html5-desktop-application-for-windows-10-11-2014) on 10. Nov 2014.
+I'm currently creating a tutorial on how to use LighweightHtmlWidgets. It will be available [here](http://gameplayjdk.wordpress.com/2014/11/10/how-to-use-lightweighthtmlwidgets-to-create-a-html5-desktop-application-for-windows-10-11-2014) on 10. Nov 2014. (Delayed)
 
 ## Documentation
 

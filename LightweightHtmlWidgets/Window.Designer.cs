@@ -31,23 +31,33 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             this.Control = new Awesomium.Windows.Forms.WebControl(this.components);
-            this.ContextMenu = new Awesomium.Windows.Forms.WebControlContextMenu(this.components);
+            this.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // Control
             // 
-            this.Control.ContextMenuStrip = this.ContextMenu;
             this.Control.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Control.Location = new System.Drawing.Point(0, 0);
             this.Control.Size = new System.Drawing.Size(284, 261);
             this.Control.TabIndex = 0;
             // 
-            // ContextMenu
+            // ContextMenuStrip
             // 
-            this.ContextMenu.Name = "ContextMenu";
-            this.ContextMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.ContextMenu.Size = new System.Drawing.Size(206, 126);
-            this.ContextMenu.View = null;
+            this.ContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem});
+            this.ContextMenuStrip.Name = "ContextMenuStrip";
+            this.ContextMenuStrip.ShowImageMargin = false;
+            this.ContextMenuStrip.Size = new System.Drawing.Size(128, 48);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.ToolTipText = "Refresh UI";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // Window
             // 
@@ -59,6 +69,7 @@
             this.Name = "Window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Window";
+            this.ContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -66,7 +77,8 @@
         #endregion
 
         private Awesomium.Windows.Forms.WebControl Control;
-        private Awesomium.Windows.Forms.WebControlContextMenu ContextMenu;
+        private System.Windows.Forms.ContextMenuStrip ContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }
 

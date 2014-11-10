@@ -92,6 +92,22 @@ namespace LightweightHtmlWidgets
                     {
                         // Do nothing...
                     }
+
+                    this.Control.ShowContextMenu += (sender, e) =>
+                    {
+                        e.Handled = true;
+                    };
+
+                    if (Boolean.Parse(this.Parser.GetSettingOrDefault("Debug", "DebugMode", "false")))
+                    {
+                        this.Control.MouseClick += (sender, e) =>
+                        {
+                            if (e.Button == MouseButtons.Right)
+                            {
+                                this.ContextMenuStrip.Show(new Point(e.X, e.Y));
+                            }
+                        };
+                    }
                 }
 
             this.Control.WebSession = WebCore.CreateWebSession(Preferences);
@@ -102,7 +118,7 @@ namespace LightweightHtmlWidgets
                 Ipy.Bind("request", false, this.Interface);
             };
             // -> Available after 'NativeVIewInitialized' event:
-            // Ipy.InvokeApi(
+            // Api.request(
             //     "Test",                                               // -> Function
             //     JSON.stringify({  }),                                 // -> Argument
             //     function (Argument) { JSON.parse(Argument); }         // -> Callback
@@ -144,6 +160,11 @@ namespace LightweightHtmlWidgets
             {
                 this.Visible = true;
             }
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Control.Reload(true);
         }
     }
 }
