@@ -93,21 +93,22 @@ namespace LightweightHtmlWidgets
                         // Do nothing...
                     }
 
-                    this.Control.ShowContextMenu += (sender, e) =>
-                    {
-                        e.Handled = true;
-                    };
-
                     if (Boolean.Parse(this.Parser.GetSettingOrDefault("Debug", "DebugMode", "false")))
                     {
-                        this.Control.MouseClick += (sender, e) =>
+                        this.Control.ShowContextMenu += (sender, e) =>
                         {
-                            if (e.Button == MouseButtons.Right)
-                            {
-                                this.ContextMenuStrip.Show(new Point(e.X, e.Y));
-                            }
+                            e.Handled = true;
+                            this.ContextMenuStrip.Show(new Point(Cursor.Position.X, Cursor.Position.Y));
                         };
                     }
+                    else
+                    {
+                        this.Control.ShowContextMenu += (sender, e) =>
+                        {
+                            e.Handled = true;
+                        };
+                    }
+
                 }
 
             this.Control.WebSession = WebCore.CreateWebSession(Preferences);

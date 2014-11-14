@@ -49,12 +49,12 @@
             this.refreshToolStripMenuItem});
             this.ContextMenuStrip.Name = "ContextMenuStrip";
             this.ContextMenuStrip.ShowImageMargin = false;
-            this.ContextMenuStrip.Size = new System.Drawing.Size(128, 48);
+            this.ContextMenuStrip.Size = new System.Drawing.Size(89, 26);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.ToolTipText = "Refresh UI";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
