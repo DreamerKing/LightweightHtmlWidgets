@@ -32,3 +32,6 @@ D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\Lightweigh
 D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\LightweightHtmlWidgets\bin\Release\Microsoft.Scripting.xml
 D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\LightweightHtmlWidgets\bin\Release\Microsoft.Scripting.Metadata.xml
 D:\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\LightweightHtmlWidgets\obj\Release\LightweightHtmlWidgets.csprojResolveAssemblyReference.cache
+D:\Files\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\LightweightHtmlWidgets\bin\Release\LightweightHtmlWidgets.exe.config
+D:\Files\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\LightweightHtmlWidgets\obj\Release\LightweightHtmlWidgets.exe
+D:\Files\Project Files\Projects (2015)\lwHtmlWidgets\LightweightHtmlWidgets\LightweightHtmlWidgets\obj\Release\LightweightHtmlWidgets.pdb

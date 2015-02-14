@@ -214,3 +214,15 @@
 [1114/222500:INFO:(0)] Running Awesomium 1.7.4.2
 [1114/225925:INFO:(0)] WebCore is now online.
 [1114/225925:INFO:(0)] Running Awesomium 1.7.4.2
+[1227/181707:INFO:(0)] WebCore is now online.
+[1227/181707:INFO:(0)] Running Awesomium 1.7.4.2
+[1227/181708:WARNING:(0)] The specified name (external), is reserved. It either represents an HTML DOM object, or an object variable already available in the page. Use ExecuteJavascriptWithResult after DocumentReady, to obtain this object.
+Parameter name: name
+[1227/181710:WARNING:(0)] You cannot make synchronous invocations from inside a synchronous IPC message dispatcher loop.
+[1227/181710:WARNING:(0)] You cannot make synchronous invocations from inside a synchronous IPC message dispatcher loop.
+[1231/003758:INFO:(0)] WebCore is now online.
+[1231/003758:INFO:(0)] Running Awesomium 1.7.4.2
+[0119/131333:INFO:(0)] WebCore is now online.
+[0119/131333:INFO:(0)] Running Awesomium 1.7.4.2
+[0214/130857:INFO:(0)] WebCore is now online.
+[0214/130857:INFO:(0)] Running Awesomium 1.7.4.2

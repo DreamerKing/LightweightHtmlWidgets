@@ -55,7 +55,12 @@ Planned features are:
 
 ## How to
 
-I'm currently creating a tutorial on how to use LighweightHtmlWidgets. It will be available [here](http://gameplayjdk.wordpress.com/2014/11/10/how-to-use-lightweighthtmlwidgets-to-create-a-html5-desktop-application-for-windows-10-11-2014) on 10. Nov 2014. (Delayed)
+~~I'm currently creating a tutorial on how to use LighweightHtmlWidgets. It will be available [here](http://gameplayjdk.wordpress.com/2014/11/10/how-to-use-lightweighthtmlwidgets-to-create-a-html5-desktop-application-for-windows-10-11-2014) on 10. Nov 2014. (Delayed)~~
+The tutorial will be released as soon as possible.
+
+## Issues
+
+As this program isn't completely tested, there can occur bugs! In case you notice an error, an unavailable functionality or have a suggestion please open an issue [here](https://github.com/GameplayJDK/LightweightHtmlWidgets/issues).
 
 ## Documentation
 
